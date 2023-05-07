@@ -10,9 +10,9 @@ Web scraper utilizes HTTP requests to receive a book name and returns a price as
 5) The URL will then show as 'http//127.0.0.1:5000/price/name+of+book', which is the correct routing.
 6) Server-wise, the procedure is the same, but the url will change. ex. 'http//randomserver/price/name+of+book'.
 
-**Example:** <br>  
+**Example:**  
 (Python) <br>  
-import requests <br>   
+import requests  
 r = requests.get('http//127.0.0.1:5000/price', params = {'name': 'name of book'})
 <br>  
 <br>  
@@ -21,10 +21,13 @@ r = requests.get('http//127.0.0.1:5000/price', params = {'name': 'name of book'}
 1) The data received should be in the variable you stored the requests.get in. (in above example, this is 'r')
 2) Use r.text to access it.
 <br>  
+<br>  
 
 ## For further help, please view testing.py
 Note: time.sleep() is added so that spamming requests will not break the connection.
 <br>  
+<br>  
+
 
 ## UML Sequence Diagram
 
