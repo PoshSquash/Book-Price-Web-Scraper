@@ -11,7 +11,7 @@ Web scraper utilizes HTTP requests to receive a book name and returns a price as
 6) Server-wise, the procedure is the same, but the url will change. ex. 'http//randomserver/price/name+of+book'.
 
 **Example:**  
-(Python) <br>  
+(Python) 
 import requests  
 r = requests.get('http//127.0.0.1:5000/price', params = {'name': 'name of book'})
 <br>  
