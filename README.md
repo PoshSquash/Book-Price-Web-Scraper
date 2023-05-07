@@ -1,5 +1,6 @@
 # Book-Price-Web-Scraper
 Web scraper utilizes HTTP requests to receive a book name and returns a price as a string.
+<br> 
 <br>  
 
 ## Requesting Data
@@ -7,16 +8,14 @@ Web scraper utilizes HTTP requests to receive a book name and returns a price as
 2) Locally, the URL will be 'http//127.0.0.1:5000/price'. '/price' is also added to it for routing purposes.
 4) When making a HTTP request, be sure to include the parameters as {'name': 'name of book'}.
 5) The URL will then show as 'http//127.0.0.1:5000/price/name+of+book', which is the correct routing.
-6) Server-wise, the procedure is the same, but the url will change. <br>  
-   Example: 'http//randomserver/price/name+of+book'.
+6) Server-wise, the procedure is the same, but the url will change. ex. 'http//randomserver/price/name+of+book'.
 
-**Example:** 
+**Example:** <br>  
 (Python) <br>  
 import requests <br>   
 r = requests.get('http//127.0.0.1:5000/price', params = {'name': 'name of book'})
 <br>  
 <br>  
-
 
 ## Receiving Data
 1) The data received should be in the variable you stored the requests.get in. (in above example, this is 'r')
