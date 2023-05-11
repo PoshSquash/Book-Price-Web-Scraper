@@ -1,4 +1,4 @@
-import requests, time
+import requests, os
 from bs4 import BeautifulSoup
 from flask import Flask, request
 
@@ -9,7 +9,7 @@ my_headers = headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) 
 
 @app.route("/")
 def home():
-    return "Welcome, this is the home page."
+    return "This is the default page. Please add '/price' to the url and use it with the query in the requests."
 
 
 @app.route("/price", methods=['GET'])
@@ -37,4 +37,4 @@ def price():
     return get_price(name)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
