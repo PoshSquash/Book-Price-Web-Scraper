@@ -7,7 +7,6 @@ app = Flask(__name__)
 my_headers = headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 '
                                       '(KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
 
-
 @app.route("/")
 def home():
     return "Welcome, this is the home page."
@@ -38,4 +37,4 @@ def price():
     return get_price(name)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
